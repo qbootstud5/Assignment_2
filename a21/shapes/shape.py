@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 
-from ..color import Color
-from ..html_doct import HtmlDoc
-from ..point import Point
+
+from a21.color import Color
+from a21.point import Point
+from a21.html_doct import HtmlDoc
 
 
 class Shape(ABC):
@@ -29,7 +30,7 @@ class Shape(ABC):
         ...
 
     def color_string(self) -> str:
-        return f'fill=rgb({self._color.red}, {self._color.green}, {self._color.blue})" fill-opacity="{self._opacity}">'
+        return f' fill="rgb({self._color.red}, {self._color.green}, {self._color.blue})" fill-opacity="{self._opacity}">'
 
     def position_string(self) -> str:
-        return f'cx="{self._position.x}" cy="{self._position.y}"'
+        return f' cx="{self._position.x}" cy="{self._position.y}" '

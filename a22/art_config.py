@@ -2,9 +2,12 @@ from typing import Tuple
 from dataclasses import dataclass
 
 
+
 @dataclass(frozen=True)
 class ArtConfig:
     # Default ranges
+    x_range: Tuple[int,int]
+    y_range: Tuple[int,int]
     # For colors
     red_range: Tuple[int, int] = (0, 255)
     green_range: Tuple[int, int] = (0, 255)

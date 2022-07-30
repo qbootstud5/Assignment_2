@@ -3,19 +3,20 @@ from a21.color import Color
 from a21.point import Point
 
 
-class Circle(Shape):
-    def __init__(self, color: Color, position: Point, opacity: float, rad: int) -> None:
+class Ellipse(Shape):
+    def __init__(self, color: Color, position: Point, opacity: float, rx: int, ry: int):
         super().__init__(color, position, opacity)
-        self.__rad = rad
+        self.__rx = rx
+        self.__ry = ry
 
     def line_header(self) -> str:
-        return "<circle"
+        return "<ellipse"
 
     def line_tail(self) -> str:
-        return "</circle>"
+        return "</ellipse>"
 
     def characteristic_string(self) -> str:
-        return f'r="{self.__rad}"'
+        return f'rx="{self.__rx}" ry="{self.__ry}"'
 
     def position_string(self) -> str:
         return f' cx="{self._position.x}" cy="{self._position.y}" '

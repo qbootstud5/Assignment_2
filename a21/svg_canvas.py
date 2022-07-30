@@ -1,4 +1,9 @@
+from typing import Union, List
+
 from html_doct import HtmlDoc
+from shapes.circle import Circle
+from shapes.ellipse import Ellipse
+from shapes.rectangle import Rectangle
 
 
 class SvgCanvas:
@@ -11,3 +16,7 @@ class SvgCanvas:
 
     def write_svg_tail(self, hd: HtmlDoc) -> None:
         hd.write_html_line(1, "</svg>")
+
+    def gen_art(self, hd: HtmlDoc, shape_list: List[Union[Circle, Rectangle, Ellipse]]) -> None:
+        for shape in shape_list:
+            shape.write_shape_line(hd)

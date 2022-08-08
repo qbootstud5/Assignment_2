@@ -2,12 +2,15 @@ from typing import Tuple
 from dataclasses import dataclass
 
 
-
+# TODO: View port: Idea: set it as the range of the svg canvas we create in part 1
 @dataclass(frozen=True)
 class ArtConfig:
+
     # Default ranges
-    x_range: Tuple[int,int]
-    y_range: Tuple[int,int]
+    x_range: Tuple[int, int]
+    y_range: Tuple[int, int]
+    # SHA to define a rectangle, circle or ellipse
+    sha_range: Tuple[int, int] = (0, 2)
     # For colors
     red_range: Tuple[int, int] = (0, 255)
     green_range: Tuple[int, int] = (0, 255)

@@ -2,7 +2,7 @@ import random
 from typing import Union
 
 
-class RandomUtil2:
+class RandomUtil:
     @classmethod
     def gen_int_in_range(cls, min_value: Union[int, float], max_value: Union[int, float]) -> int:
         if min_value.is_integer():

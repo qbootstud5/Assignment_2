@@ -5,10 +5,12 @@ from typing import Union
 class RandomUtil:
     @classmethod
     def gen_int_in_range(cls, min_value: Union[int, float], max_value: Union[int, float]) -> int:
-        if min_value.is_integer():
-            raise TypeError(f"The min_value should be an integer, not {min_value}")
-        if max_value.is_integer():
-            raise TypeError(f"The max_value should be an integer, not {max_value}")
+        if not isinstance(min_value, int):
+            if min_value.is_integer():
+                raise TypeError(f"The min_value should be an integer, not {min_value}")
+        if not isinstance(max_value, int):
+            if max_value.is_integer():
+                raise TypeError(f"The max_value should be an integer, not {max_value}")
         return random.randint(min_value, max_value)
 
     @classmethod
@@ -23,6 +25,15 @@ class RandomUtil:
         except ValueError:
             raise ValueError("The given max_value cannot be converted to float")
 
-        return random.uniform(float_min, float_max)
+        return round(random.uniform(float_min, float_max), 2)
+
+    @classmethod
+    def gen_value_in_range(cls, min_value: Union[int, float], max_value: Union[int, float], value_type:str = float):
+        if value_type == float:
+            return cls.gen_float_in_range(min_value, max_value)
+        elif value_type == int:
+            return cls.gen_int_in_range(min_value, max_value)
+        else:
+            raise NotImplementedError
 
 

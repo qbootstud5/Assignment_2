@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
-
+from typing import Tuple
 from a21.color import Color
 from a21.point import Point
 from a21.html_doct import HtmlDoc
+from a22.shape_dataclass import ShapeData
 
 
 class Shape(ABC):
@@ -34,3 +35,19 @@ class Shape(ABC):
     @abstractmethod
     def position_string(self) -> str:
         ...
+
+    @classmethod
+    @abstractmethod
+    def construct_from_shape_data(cls, shape_data: ShapeData):
+        ...
+
+    @staticmethod
+    def get_color_point(shape_data: ShapeData) -> Tuple[Color, Point]:
+        """
+        Static method to get the color and the point object out of a ShapeData dataclass
+        :param shape_data: the data of the shape
+        :return:
+        """
+        color: Color = Color(shape_data.red, shape_data.green, shape_data.blue)
+        position: Point = Point(shape_data.x, shape_data.y)
+        return color, position

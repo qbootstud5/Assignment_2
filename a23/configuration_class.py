@@ -52,6 +52,9 @@ class Configuration:
         """
         return self.correspondency_sha_dict()[shape_data.sha].construct_from_shape_data(shape_data)
 
+    def compute_title_string(self, title: str):
+        return title.center(self.svg_width, "-")
+
     def write_html(self, file_path: str, title: str) -> None:
         """
         The method to write the html file
@@ -64,6 +67,9 @@ class Configuration:
         hd.open_html_file()
         # Write head
         hd.write_html_head()
+        # Write the svg title:
+        image_title = f'{self.svg_width}x{self.svg_width}; {self.number_shape} shapes'
+        hd.write_html_line(1, f"<h1>{image_title}</h1>")
         # Write the svg lines
         svg_canvas: SvgCanvas = SvgCanvas(width=self.svg_width, height=self.svg_height)
         svg_canvas.write_svg_header(hd)

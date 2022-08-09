@@ -38,9 +38,12 @@ class HtmlDoc:
         self.write_html_line(0, "<html>")
         self.write_html_line(0, "<head>")
         self.write_html_line(1, f"<title>{self.__window_title}</title>")
+        # Set up style
+        self.write_html_line(0, "<style>")
+        self.write_html_line(1, "h1 {text-align: center;}")
+        self.write_html_line(0, "</style>")
         self.write_html_line(0, "</head>")
         self.write_html_line(0, "<body>")
-        self.__write_html_comment(1, "to be generated")
 
     def write_html_tail(self) -> None:
         self.write_html_line(0, "</body>")

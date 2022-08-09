@@ -29,7 +29,7 @@ def test_shape():
 
 
 def main() -> None:
-    hd: HtmlDoc = HtmlDoc("part1_test_3.html", "MyPart1")
+    hd: HtmlDoc = HtmlDoc("part1.html", "MyPart1")
     hd.open_html_file()
     hd.write_html_head()
     svg_canvas: SvgCanvas = SvgCanvas(width=30, height=30)

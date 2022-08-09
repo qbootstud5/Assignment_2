@@ -10,6 +10,9 @@ from a22.utils import generate_shape_data
 
 
 class Configuration:
+    """
+    Class to set up a canvas and write the html document
+    """
 
     def __init__(self, number_shape: int, art_config: ArtConfig, svg_width: int, svg_height: int) -> None:
         """

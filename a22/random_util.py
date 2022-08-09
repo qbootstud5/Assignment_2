@@ -3,6 +3,9 @@ from typing import Union
 
 
 class RandomUtil:
+    """
+    RandomUtil dataclass to create random shapes
+    """
     @classmethod
     def gen_int_in_range(cls, min_value: Union[int, float], max_value: Union[int, float]) -> int:
         if not isinstance(min_value, int):

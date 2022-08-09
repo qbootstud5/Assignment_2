@@ -2,9 +2,11 @@ from typing import Tuple
 from dataclasses import dataclass
 
 
-# TODO: View port: Idea: set it as the range of the svg canvas we create in part 1
 @dataclass(frozen=True)
 class ArtConfig:
+    """
+    Art config dataclass
+    """
 
     # Default ranges
     x_range: Tuple[int, int]

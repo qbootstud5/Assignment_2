@@ -3,6 +3,9 @@ from dataclasses import dataclass, asdict
 
 @dataclass(frozen=True)
 class ShapeData:
+    """
+    Shape dataclass to store values defining a shape
+    """
     # For position
     x: int
     y: int

@@ -19,14 +19,26 @@ class Shape(ABC):
 
     @abstractmethod
     def line_header(self) -> str:
+        """
+        Method to construct the line header string
+        :return:
+        """
         ...
 
     @abstractmethod
     def line_tail(self) -> str:
+        """
+        Method to construct the line tail string
+        :return:
+        """
         ...
 
     @abstractmethod
     def characteristic_string(self) -> str:
+        """
+        Method to construct the characteristic string, i.e the one that differs for each shape
+        :return:
+        """
         ...
 
     def color_string(self) -> str:
@@ -34,11 +46,20 @@ class Shape(ABC):
 
     @abstractmethod
     def position_string(self) -> str:
+        """
+        Method to construct the position string
+        :return:
+        """
         ...
 
     @classmethod
     @abstractmethod
     def construct_from_shape_data(cls, shape_data: ShapeData):
+        """
+        Alternative constructor to construct from a data object
+        :param shape_data: the data object containing the information of the shape
+        :return:
+        """
         ...
 
     @staticmethod

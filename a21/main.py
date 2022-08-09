@@ -7,13 +7,13 @@ Created on Tuesday July 29
 This file solves the Assignment 2.1
 """
 
-from a21.color import Color
-from a21.html_doct import HtmlDoc
-from a21.point import Point
-from a21.shapes.circle import Circle
-from a21.shapes.rectangle import Rectangle
-from a21.shapes.ellipse import Ellipse
-from a21.svg_canvas import SvgCanvas
+from color import Color
+from html_doct import HtmlDoc
+from point import Point
+from shapes.circle import Circle
+from shapes.rectangle import Rectangle
+from shapes.ellipse import Ellipse
+from svg_canvas import SvgCanvas
 
 
 def test_shape() -> list:

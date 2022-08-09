@@ -7,7 +7,7 @@ Created on Tuesday August 09
 This file solves the Assignment 2.2
 """
 
-from a22.utils import generate_shape_data, create_array, right_justify_string_sequence
+from utils import generate_shape_data, create_array, right_justify_string_sequence
 from shape_dataclass import ShapeData
 import numpy as np
 from art_config import ArtConfig

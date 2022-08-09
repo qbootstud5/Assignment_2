@@ -135,9 +135,6 @@ def configuration_blue_ellipse(num_shapes: int, svg_size: tuple[int, int] = (800
 def main():
     all_random_config(1000)
     opaque_config(300)
-    configuration_green_circle(100)
-    configuration_red_rectangle(100)
-    configuration_blue_ellipse(100)
     green_shades(300)
 
 

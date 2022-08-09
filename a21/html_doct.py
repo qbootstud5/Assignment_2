@@ -5,6 +5,9 @@ from typing import IO
 
 
 class HtmlDoc:
+    """
+    Class to write html document
+    """
     TAB: str = "   "  # HTML indentation tab (default: three spaces)
 
     def __init__(self, file_name: str, window_title: str) -> None:

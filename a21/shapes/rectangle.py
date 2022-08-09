@@ -5,7 +5,18 @@ from a22.shape_dataclass import ShapeData
 
 
 class Rectangle(Shape):
+    """
+    Class for the rectangle shape
+    """
     def __init__(self, color: Color, position: Point, opacity: float, width: int, height: int):
+        """
+        Constructor for the rectangle
+        :param color:
+        :param position:
+        :param opacity:
+        :param width: width of the rectangle
+        :param height: height of the rectangle
+        """
         super().__init__(color, position, opacity)
         self.__width = width
         self.__height = height

@@ -5,7 +5,18 @@ from a22.shape_dataclass import ShapeData
 
 
 class Ellipse(Shape):
+    """
+    Class for the ellipse shape
+    """
     def __init__(self, color: Color, position: Point, opacity: float, rx: int, ry: int):
+        """
+        Constructor for the ellipse
+        :param color:
+        :param position:
+        :param opacity:
+        :param rx: x radius
+        :param ry: y radius
+        """
         super().__init__(color, position, opacity)
         self.__rx = rx
         self.__ry = ry

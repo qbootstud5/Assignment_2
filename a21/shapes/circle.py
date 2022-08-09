@@ -5,7 +5,17 @@ from a21.point import Point
 
 
 class Circle(Shape):
+    """
+    Class for the circle
+    """
     def __init__(self, color: Color, position: Point, opacity: float, rad: int) -> None:
+        """
+        Constructor for the circle
+        :param color:
+        :param position:
+        :param opacity:
+        :param rad: radius of the circle
+        """
         super().__init__(color, position, opacity)
         self.__rad = rad
 

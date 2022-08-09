@@ -15,20 +15,29 @@ from a21.shapes.rectangle import Rectangle
 from a21.shapes.ellipse import Ellipse
 from a21.svg_canvas import SvgCanvas
 
-def test_shape():
+
+def test_shape() -> list:
+    """
+    Test function to run the main script
+    :return:
+    """
     color = Color(2, 3, 4)
     point = Point(10, 15)
     opacity = 0.5
     circle = Circle(color, point, opacity, 10)
 
-    ellipse = Ellipse(color, point, opacity, 13,15)
+    ellipse = Ellipse(color, point, opacity, 13, 15)
 
-    rect = Rectangle(color,point, opacity, 34,36)
+    rect = Rectangle(color, point, opacity, 34, 36)
 
     return [circle, ellipse, rect]
 
 
 def main() -> None:
+    """
+    Main script running function
+    :return:
+    """
     hd: HtmlDoc = HtmlDoc("part1.html", "MyPart1")
     hd.open_html_file()
     hd.write_html_head()

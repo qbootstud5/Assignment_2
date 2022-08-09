@@ -7,11 +7,15 @@ from a21.shapes.rectangle import Rectangle
 
 
 class SvgCanvas:
+    """
+    Class to write the svg in html
+    """
     def __init__(self, width: int, height: int) -> None:
         self.__width: int = width
         self.__height: int = height
 
     def write_svg_header(self, hd: HtmlDoc) -> None:
+        # Add a div to center the svg
         hd.write_html_line(1,f'<div style="text-align:center;">')
         hd.write_html_line(1, f'<svg width="{self.__width}" height="{self.__height}">')
 

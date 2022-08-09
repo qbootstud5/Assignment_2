@@ -7,12 +7,26 @@ from a22.shape_dataclass import ShapeData
 
 
 class Shape(ABC):
+    """
+    Abstract class to set up the shapes
+    """
     def __init__(self, color: Color, position: Point, opacity: float) -> None:
+        """
+        Constructor for the shape
+        :param color: color of the shape
+        :param position: position of the shape
+        :param opacity: opacity of the shape
+        """
         self._color = color
         self._position = position
         self._opacity = opacity
 
     def write_shape_line(self, hd: HtmlDoc) -> None:
+        """
+        Method to write the shape line, which gathers custom lines according to different shapes
+        :param hd:
+        :return:
+        """
         shape_string: str = self.line_header() + self.position_string() + self.characteristic_string() + \
                             self.color_string() + self.line_tail()
         hd.write_html_line(2, shape_string)

@@ -1,5 +1,11 @@
-#!/usr/bin/env python
-"""Assignment 2 Part 1 running script"""
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tuesday July 29
+@author: Jon Oillarburu
+
+This file solves the Assignment 2.1
+"""
 
 from a21.color import Color
 from a21.html_doct import HtmlDoc

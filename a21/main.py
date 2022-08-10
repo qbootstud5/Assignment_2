@@ -15,6 +15,11 @@ from shapes.rectangle import Rectangle
 from shapes.ellipse import Ellipse
 from svg_canvas import SvgCanvas
 
+from pathlib import Path
+
+dir_path = Path(__file__).parent
+
+
 
 def test_shape() -> list:
     """
@@ -38,7 +43,7 @@ def main() -> None:
     Main script running function
     :return:
     """
-    hd: HtmlDoc = HtmlDoc("part1.html", "MyPart1")
+    hd: HtmlDoc = HtmlDoc(dir_path / "part1.html", "MyPart1")
     hd.open_html_file()
     hd.write_html_head()
     svg_canvas: SvgCanvas = SvgCanvas(width=30, height=30)

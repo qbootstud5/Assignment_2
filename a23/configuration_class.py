@@ -1,4 +1,5 @@
 from typing import Union
+from pathlib import Path
 from a21.shapes.circle import Circle
 from a21.shapes.rectangle import Rectangle
 from a21.shapes.ellipse import Ellipse
@@ -58,7 +59,7 @@ class Configuration:
     def compute_title_string(self, title: str):
         return title.center(self.svg_width, "-")
 
-    def write_html(self, file_path: str, title: str) -> None:
+    def write_html(self, file_path: Union[str,Path], title: str) -> None:
         """
         The method to write the html file
         :param file_path:

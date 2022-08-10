@@ -17,6 +17,9 @@ This file solves the Assignment 2.3
 """
 from a22.art_config import ArtConfig
 from a23.configuration_class import Configuration
+from pathlib import Path
+
+dir_path = Path(__file__).parent
 
 
 def all_random_config(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
@@ -32,7 +35,7 @@ def all_random_config(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
     )
     config: Configuration = Configuration(num_shapes, art_config, *svg_size)
 
-    config.write_html("part3_all_random.html", "Mypart3_1")
+    config.write_html(dir_path / "part3_all_random.html", "Mypart3_1")
 
 
 def opaque_config(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
@@ -49,7 +52,7 @@ def opaque_config(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
     )
     config: Configuration = Configuration(num_shapes, art_config, *svg_size)
 
-    config.write_html("part3_opacity.html", "Mypart3_1")
+    config.write_html(dir_path / "part3_opacity.html", "Mypart3_1")
 
 
 def green_shades(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
@@ -67,7 +70,7 @@ def green_shades(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
     )
     config: Configuration = Configuration(num_shapes, art_config, *svg_size)
 
-    config.write_html("part3_green_shades.html", "Mypart3_1")
+    config.write_html(dir_path / "part3_green_shades.html", "Mypart3_1")
 
 
 def configuration_green_circle(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
@@ -87,7 +90,7 @@ def configuration_green_circle(num_shapes: int, svg_size: tuple[int, int] = (800
     )
     config: Configuration = Configuration(num_shapes, art_config, *svg_size)
 
-    config.write_html("part3_green_circles.html", "Mypart3_1")
+    config.write_html(dir_path / "part3_green_circles.html", "Mypart3_1")
 
 
 def configuration_red_rectangle(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
@@ -108,7 +111,7 @@ def configuration_red_rectangle(num_shapes: int, svg_size: tuple[int, int] = (80
     )
     config: Configuration = Configuration(num_shapes, art_config, *svg_size)
 
-    config.write_html("part3_red_rectangles.html", "Mypart3_1")
+    config.write_html(dir_path / "part3_red_rectangles.html", "Mypart3_1")
 
 
 def configuration_blue_ellipse(num_shapes: int, svg_size: tuple[int, int] = (800, 800)):
@@ -128,8 +131,7 @@ def configuration_blue_ellipse(num_shapes: int, svg_size: tuple[int, int] = (800
         ellipse_ry_range=(100, 200)
     )
     config: Configuration = Configuration(num_shapes, art_config, *svg_size)
-
-    config.write_html("part3_blue_ellipses.html", "Mypart3_1")
+    config.write_html(dir_path / "part3_blue_ellipses.html", "Mypart3_1")
 
 
 def main():

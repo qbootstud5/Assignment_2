@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 """Assignment 2 Part 1 starter"""
 
-from typing import IO
+from typing import IO, Union
+from pathlib import Path
 
 
 class HtmlDoc:
@@ -10,7 +11,7 @@ class HtmlDoc:
     """
     TAB: str = "   "  # HTML indentation tab (default: three spaces)
 
-    def __init__(self, file_name: str, window_title: str) -> None:
+    def __init__(self, file_name: Union[str, Path], window_title: str) -> None:
         self.__file_name: str = file_name
         self.__window_title: str = window_title
         self.fd: IO[str] = self.open_html_file()
